@@ -2,6 +2,7 @@ const router = require('express').Router();
 // const authenticate = require('../utils/readname');
 const notesData = require('../util/db/db.json');
 const fs = require('fs')
+const { v4: uuidv4 } = require('uuid');
 
 // console.log(notesData)
 
@@ -18,8 +19,16 @@ router.get('/:id', (req, res) => {
 
 router.post('/notes', (req, res) => {
   console.log(req.body)
-  notesData.push(req.body)
+  const {title, text} = req.body
+  const newNote = {
+    title, 
+    text, 
+    noteId: uuidv4(),
+  }
+
+  notesData.push(newNote)
   console.log(notesData)
+
   fs.writeFile('./util/db/db.json', `${JSON.stringify(notesData)}`, (error) => {
       error ? console.log(error) : console.log('New note saved to database.')
   })
