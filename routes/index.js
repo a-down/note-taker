@@ -13,8 +13,17 @@ router.get('/notes', (req, res) => {
   console.log('notes sent to request')
 })
 
-router.get('/:id', (req, res) => {
-  // ...
+router.get('/notes/:id', (req, res) => {
+  // const request = req.body
+  // console.log((request))
+  console.log(req.params)
+  let foundNote
+  notesData.forEach((note) => { 
+    if (note.noteId === req.params.id) {
+      foundNote = note  
+    }})
+  console.log(foundNote)
+  res.status(200).json(foundNote)
 })
 
 router.post('/notes', (req, res) => {
