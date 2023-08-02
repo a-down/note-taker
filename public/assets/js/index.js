@@ -73,7 +73,7 @@ const handleNoteSave = () => {
   };
   saveNote(newNote).then(() => {
     getAndRenderNotes();
-    renderActiveNote();
+    renderActiveNote(newNote);
   });
 };
 
@@ -99,7 +99,7 @@ const handleNoteDelete = (e) => {
 const handleNoteView = (e) => {
   e.preventDefault();
   activeNote = JSON.parse(e.target.parentElement.getAttribute('data-note'));
-  console.log(activeNote.noteId)
+  // console.log(activeNote.noteId)
   renderActiveNote(activeNote);
 };
 
