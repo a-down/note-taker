@@ -3,12 +3,13 @@ const router = require('express').Router();
 const notesData = require('../util/db/db.json');
 const fs = require('fs')
 
-console.log(notesData)
+// console.log(notesData)
 
 
 
-router.get('/', (req, res) => {
-  // ...
+router.get('/notes', (req, res) => {
+  res.status(200).json(notesData)
+  console.log('notes sent to request')
 })
 
 router.get('/:id', (req, res) => {
