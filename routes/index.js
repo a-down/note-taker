@@ -1,4 +1,9 @@
 const router = require('express').Router();
+// const authenticate = require('../utils/readname');
+const notesData = require('../util/db/db.json');
+const fs = require('fs')
+
+console.log(notesData)
 
 
 
