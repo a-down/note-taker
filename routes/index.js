@@ -16,8 +16,13 @@ router.get('/:id', (req, res) => {
   // ...
 })
 
-router.post('/', (req, res) => {
-  // ...
+router.post('/notes', (req, res) => {
+  console.log(req.body)
+  notesData.push(req.body)
+  console.log(notesData)
+  fs.writeFile('./util/db/db.json', `${JSON.stringify(notesData)}`, (error) => {
+      error ? console.log(error) : console.log('New note saved to database.')
+  })
 })
 
 router.put('/:id', (req, res) => {
