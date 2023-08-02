@@ -23,6 +23,7 @@ router.post('/notes', (req, res) => {
   fs.writeFile('./util/db/db.json', `${JSON.stringify(notesData)}`, (error) => {
       error ? console.log(error) : console.log('New note saved to database.')
   })
+  res.status(200).json(JSON.stringify(notesData))
 })
 
 router.put('/:id', (req, res) => {
