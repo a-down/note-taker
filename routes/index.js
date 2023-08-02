@@ -7,15 +7,14 @@ const { v4: uuidv4 } = require('uuid');
 // console.log(notesData)
 
 
-
+// API request to get all notes
 router.get('/notes', (req, res) => {
   res.status(200).json(notesData)
   console.log('notes sent to request')
 })
 
+// API request for a particular note
 router.get('/notes/:id', (req, res) => {
-  // const request = req.body
-  // console.log((request))
   console.log(req.params)
   let foundNote
   notesData.forEach((note) => { 
@@ -26,6 +25,7 @@ router.get('/notes/:id', (req, res) => {
   res.status(200).json(foundNote)
 })
 
+// API request to post new notes to the database
 router.post('/notes', (req, res) => {
   console.log(req.body)
   const {title, text} = req.body
@@ -44,10 +44,8 @@ router.post('/notes', (req, res) => {
   res.status(200).json(JSON.stringify(notesData))
 })
 
-router.put('/:id', (req, res) => {
-  // ...
-})
-
+// API request to delete a note
+  // called with delete button next to note on notes page
 router.delete('/:id', (req, res) => {
   // ...
 })
