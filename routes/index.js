@@ -26,6 +26,7 @@ router.get('/notes/:id', (req, res) => {
 })
 
 // API request to post new notes to the database
+  // called with the 'save' button on notes page
 router.post('/notes', (req, res) => {
   // console.log(req.body)
   const {title, text} = req.body
@@ -45,7 +46,7 @@ router.post('/notes', (req, res) => {
 })
 
 // API request to delete a note
-  // called with delete button next to note on notes page
+  // called with 'delete' button next to note on notes page
 router.delete('/notes/:id', (req, res) => {
   // console.log(req.params)
 

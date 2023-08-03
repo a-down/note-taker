@@ -35,7 +35,6 @@ The goal was to create a note taking application so that the user can keep thems
 ![Notes Page Visual Example](./util/images/visual-2.png)
 
 
-
 ## Deployed Application (Heroku)
 
 [Deployed Application on Heroku](https://a-down-note-taker-a4f5d9c37c25.herokuapp.com/)
