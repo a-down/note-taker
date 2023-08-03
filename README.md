@@ -7,62 +7,39 @@ The goal was to create a note taking application so that the user can keep thems
   - Clicking the Save button saves the new note to the existing notes column
   - Existing notes can be clicked on to display in the column on the right
   - Clicking the Write (plus) icon presents empty fields to enter a new note
-  - Bonus: The delete button for an existing note allows the user to delete the note
+  - The delete button on an existing note allows the user to delete the note
 
 ## Usage
 
-- To start the README Generator, run: 
+1. To use the application, navigate to the notes page with:
+    ```
+    Get Started
+    ``` 
+2. If you are loading the application for the first time, click on existing note on the left titled:
+    ```
+    Usage Directions
+    ```
+3. To create a new note, click the "+" button in the header and add a title and body text for your note.
 
-  ```
-  node index.js
-  ``` 
+4. To save a note (once you have a title and body text), click the "save" icon in the header.
 
-  in the command line. You will then answer prompts to generate the logo.
+5. To view an existing note, click on the note title in the left column of the page.
 
-- If you choose not to answer a prompt in the terminal, you will be required to answer all prompts again.
-- If you use more than 3 characters for the text prompt, you will be required to answer all prompts again.
-
-# Testing
-
-- To test, make sure the `jest` npm is installed
-- In the terminal:
-  ```
-  npm run test
-  ```
+6. To delete an existing note, press the "red trash can" button of the note you want to delete.
 
 
-## Visual Example of Generated README
+## Visual Example
 
-![Visual of Rendered Logo](./util/logo-examples/example-1.svg)
+![Landing Page Visual Example](./util/images/visual-1.png)
 
-
-
-## Video Demo
-
-[Link to Demo Video](https://watch.screencastify.com/v/RgutWQIgY9iayJUtEtbB)
+![Notes Page Visual Example](./util/images/visual-2.png)
 
 
 
+## Deployed Application (Heroku)
 
-AS A small business owner
-I WANT to be able to write and save notes
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
+[Link to Demo Video](https://a-down-note-taker-a4f5d9c37c25.herokuapp.com/)
 
-
-GIVEN a note-taking application
-WHEN I open the Note Taker
-THEN I am presented with a landing page with a link to a notes page
-WHEN I click on the link to the notes page
-THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
-WHEN I enter a new note title and the note’s text
-THEN a Save icon appears in the navigation at the top of the page
-WHEN I click on the Save icon
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
-WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column
-WHEN I click on the Write icon in the navigation at the top of the page
-THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
-```
 
 
 
