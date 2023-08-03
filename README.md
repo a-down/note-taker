@@ -37,4 +37,4 @@ The goal was to create a note taking application so that the user can keep thems
 
 ## Deployed Application (Heroku)
 
-[Deployed Application on Heroku](https://a-down-note-taker-a4f5d9c37c25.herokuapp.com/){:target="_blank"} 
+[Deployed Application on Heroku](https://a-down-note-taker-a4f5d9c37c25.herokuapp.com/)
