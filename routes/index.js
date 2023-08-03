@@ -10,24 +10,24 @@ const { v4: uuidv4 } = require('uuid');
 // API request to get all notes
 router.get('/notes', (req, res) => {
   res.status(200).json(notesData)
-  console.log('notes sent to request')
+  console.log('Notes sent to request.')
 })
 
 // API request for a particular note
 router.get('/notes/:id', (req, res) => {
-  console.log(req.params)
+  // console.log(req.params)
   let foundNote
   notesData.forEach((note) => { 
     if (note.noteId === req.params.id) {
       foundNote = note  
     }})
-  console.log(foundNote)
+  // console.log(foundNote)
   res.status(200).json(foundNote)
 })
 
 // API request to post new notes to the database
 router.post('/notes', (req, res) => {
-  console.log(req.body)
+  // console.log(req.body)
   const {title, text} = req.body
   const newNote = {
     title, 
@@ -36,7 +36,7 @@ router.post('/notes', (req, res) => {
   }
 
   notesData.push(newNote)
-  console.log(notesData)
+  // console.log(notesData)
 
   fs.writeFile('./util/db/db.json', `${JSON.stringify(notesData)}`, (error) => {
       error ? console.log(error) : console.log('New note saved to database.')
@@ -47,12 +47,12 @@ router.post('/notes', (req, res) => {
 // API request to delete a note
   // called with delete button next to note on notes page
 router.delete('/notes/:id', (req, res) => {
-  console.log(req.params)
+  // console.log(req.params)
 
   for (i = 0; i < notesData.length; i++) {
     if (notesData[i].noteId === req.params.id) {
       notesData.splice(i, 1)
-      console.log(i)
+      // console.log(i)
     }
   }
 
