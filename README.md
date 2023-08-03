@@ -28,7 +28,7 @@ The goal was to create a note taking application so that the user can keep thems
 6. To delete an existing note, press the "red trash can" button of the note you want to delete.
 
 
-## Visual Example
+## Visual Examples
 
 ![Landing Page Visual Example](./util/images/visual-1.png)
 
@@ -37,4 +37,4 @@ The goal was to create a note taking application so that the user can keep thems
 
 ## Deployed Application (Heroku)
 
-[Deployed Application on Heroku](https://a-down-note-taker-a4f5d9c37c25.herokuapp.com/)
+[Deployed Application on Heroku](https://a-down-note-taker-a4f5d9c37c25.herokuapp.com/) {:target="_blank"} 
