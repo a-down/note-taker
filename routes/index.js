@@ -4,7 +4,7 @@ const notesData = require('../util/db/db.json');
 const fs = require('fs')
 const { v4: uuidv4 } = require('uuid');
 
-console.log(notesData)
+// console.log(notesData)
 
 
 // API request to get all notes
@@ -55,11 +55,11 @@ router.delete('/notes/:id', (req, res) => {
       }
     }
 
-  fs.writeFile('./util/db/db.json', `${JSON.stringify(notesData)}`, (error) => {
-    error ? console.log(error) : console.log('Note has been deleted.')
-  })
+    fs.writeFile('./util/db/db.json', `${JSON.stringify(notesData)}`, (error) => {
+      error ? console.log(error) : console.log('Note has been deleted.')
+    })
   
-  res.status(200).json(notesData)
+    res.status(200).json({ msg: 'Note is deleted.'})
   })
 
 
