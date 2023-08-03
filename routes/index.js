@@ -48,19 +48,20 @@ router.post('/notes', (req, res) => {
   // called with delete button next to note on notes page
 router.delete('/notes/:id', (req, res) => {
   console.log(req.params)
-    for (i = 0; i < notesData.length; i++) {
-      if (notesData[i].noteId === req.params.id) {
-        notesData.splice(i, 1)
-        console.log(i)
-      }
-    }
 
-    fs.writeFile('./util/db/db.json', `${JSON.stringify(notesData)}`, (error) => {
-      error ? console.log(error) : console.log('Note has been deleted.')
-    })
-  
-    res.status(200).json({ msg: 'Note is deleted.'})
+  for (i = 0; i < notesData.length; i++) {
+    if (notesData[i].noteId === req.params.id) {
+      notesData.splice(i, 1)
+      console.log(i)
+    }
+  }
+
+  fs.writeFile('./util/db/db.json', `${JSON.stringify(notesData)}`, (error) => {
+    error ? console.log(error) : console.log('Note has been deleted.')
   })
+  
+  res.status(200).json({ msg: 'Note is deleted.'})
+})
 
 
 
